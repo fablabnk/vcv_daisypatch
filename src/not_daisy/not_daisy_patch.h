@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstddef>
 #include "ctrl.h"
 #include "dac.h"
 #include "daisy_seed.h"

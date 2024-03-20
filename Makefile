@@ -4,17 +4,18 @@ RACK_DIR ?= ../..
 OPT = -O0
 
 # FLAGS will be passed to both the C and C++ compiler
-FLAGS += -Isrc/not_daisy -Iexternals/daisySP/Source
+FLAGS += -Isrc/not_daisy -Iexternals/DaisySP/Source -Iexternals/DaisySP/Source/Utility
 CFLAGS +=
 CXXFLAGS +=
 
 # Careful about linking to shared libraries, since you can't assume much about the user's environment and library search path.
 # Static libraries are fine, but they should be added to this plugin's build system.
-LDFLAGS += -Lexternals/daisySP/Build -ldaisysp
+LDFLAGS += -Lexternals/DaisySP/Build # -ldaisysp
 
 # Add .cpp files to the build
 SOURCES += $(wildcard src/*.cpp)
 SOURCES += $(wildcard src/not_daisy/*.cpp)
+SOURCES += ${wildcard inc/DaisySP/Source/**/*.cpp}
 
 # Add files to the ZIP package when running `make dist`
 # The compiled plugin and "plugin.json" are automatically added.
