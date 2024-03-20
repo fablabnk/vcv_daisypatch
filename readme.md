@@ -2,6 +2,18 @@
 
 ![VCV Patch](vcv_patch.png)
 
+## Grahams additions
+Don't forget to:
+```
+export RACK_SDK=/home/grm/Desktop/SynthLab/VCVRack/Rack-SDK
+```
+
+and
+```
+git submodule init
+git submodule update 
+```
+
 ## What it is
 VcvDaisyPatch is a VCV Rack module that mimics the inputs and outputs of the Electro-Smith Daisy Patch. It allows easy testing of patches in VCV Rack before uploading to the Daisy Patch hardware. The aspiration for this project is to be able to simply copy and paste your `AudioCallback` code from your Daisy Patch project into the VcvDaisyPatch module and have it work without modification.
 

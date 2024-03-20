@@ -15,7 +15,7 @@ LDFLAGS += -Lexternals/DaisySP/Build # -ldaisysp
 # Add .cpp files to the build
 SOURCES += $(wildcard src/*.cpp)
 SOURCES += $(wildcard src/not_daisy/*.cpp)
-SOURCES += ${wildcard inc/DaisySP/Source/**/*.cpp}
+SOURCES += ${wildcard externals/DaisySP/Source/**/*.cpp}
 
 # Add files to the ZIP package when running `make dist`
 # The compiled plugin and "plugin.json" are automatically added.
